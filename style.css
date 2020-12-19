@@ -1,0 +1,86 @@
+:root{
+    --speed:1;
+}
+.heading{
+    text-align: center;
+    font-size: 25pt;
+}
+#score_val{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 25pt;
+    width:200px;
+    height:34px;
+    /* background-color:rgb(131, 139, 19); */
+    animation: blinker;
+    animation-iteration-count: infinite;
+    animation-duration: 1000ms;
+    margin-left: 42%;
+}
+.machine {
+    background-color: peru;
+    border: dashed black 5px;
+    height: 300px;
+    width: 900px;
+    display:flex;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.text{
+    font-size: 20pt;
+    margin-left: 20%;
+    display: inline-block;
+}
+#inpSpeed{
+    font-size: 30pt;
+    margin-left: 45%;
+    display:inline-block;
+    margin-left:35px;
+}
+#start{
+    font-size: 30pt;
+    margin-top: 20px;
+    margin-left: 38%;
+    border-radius: 10px;
+    background-color: silver;
+}
+#stop{
+    font-size: 30pt;
+    margin-top: 20px;
+    margin-left: 40px; 
+    border-radius: 10px;
+    background-color: silver;
+}
+.slot{
+    height:250px;
+    margin:20px;
+    width: 250px;
+    background-color: powderblue;
+    border:solid black 5px ;
+    text-align: center;
+    font-size: 100pt;
+    line-height: 250px;
+    overflow: hidden;
+}
+.slot .value{
+    animation: slotspin ;
+    animation-iteration-count: infinite;
+    animation-duration: calc(1s/ var(--speed));
+    /* animation-play-state: running; */
+}
+
+@keyframes slotspin{
+    0% {
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(200px);
+    }
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
